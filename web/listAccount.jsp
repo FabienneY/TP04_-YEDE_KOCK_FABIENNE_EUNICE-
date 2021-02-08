@@ -13,20 +13,24 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     </head>
     <body>
-        
+        <div>
+        <center>
         <c:if test="${param['action'] == 'listeAccount'}" >
             <h1>Liste des comptes</h1>
-
-            <table border="10">
+<br><br>
+            <table classe="table table-dark">
                 <!-- La ligne de titre du tableau des comptes -->
                 <tr>
-                    <td><b>Nom</b></td>
-                    <td><b>Prénom</b></td>
-                    <td><b>Numéro de compte</b></td>
-                    <td><b>Balance</b></td>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prénom</th>
+                    <th scope="col">Numéro de compte</th>
+                   <th scope="col">Balance</th>
                 </tr>
+                
 
                 <!-- Ici on affiche les lignes, une par utilisateur -->
                 <!-- cette variable montre comment on peut utiliser JSTL et EL pour calculer -->
@@ -48,5 +52,7 @@
             </table>
 
         </c:if>
+            </center>
+            </div>
     </body>
 </html>
